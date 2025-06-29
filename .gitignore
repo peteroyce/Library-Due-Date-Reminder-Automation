@@ -1,0 +1,7 @@
+.local/
+.project/
+.settings/
+*.nuget.props
+nuget.cache
+PackageCache.json
+AllDependencies.json
