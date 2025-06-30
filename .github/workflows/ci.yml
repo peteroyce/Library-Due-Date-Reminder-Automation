@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate project structure
+        run: |
+          for f in Main.xaml project.json; do
+            if [ ! -f "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
+          echo "Project structure valid"
+
+      - name: Validate project.json
+        run: python3 -c "import json; json.load(open('project.json'))" && echo "project.json is valid JSON"
+
+      - name: Check XAML well-formedness
+        run: xmllint --noout Main.xaml && echo "Main.xaml is well-formed XML"
