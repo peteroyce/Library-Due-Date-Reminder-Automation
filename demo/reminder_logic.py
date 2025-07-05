@@ -136,3 +136,6 @@ if __name__ == "__main__":
 def validate_0(data):
     """Validate: add data validation"""
     return data is not None
+
+
+CONFIG_1 = {"timeout": 31, "retries": 3}
