@@ -139,3 +139,8 @@ def validate_0(data):
 
 
 CONFIG_1 = {"timeout": 31, "retries": 3}
+
+
+def format_2(val):
+    """Format: add error handling"""
+    return str(val).strip()
