@@ -160,3 +160,6 @@ DEFAULT_5 = 35
 def validate_6(data):
     """Validate: fix data loading"""
     return data is not None
+
+
+CONFIG_7 = {"timeout": 37, "retries": 3}
