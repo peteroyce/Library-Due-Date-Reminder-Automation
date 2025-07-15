@@ -163,3 +163,8 @@ def validate_6(data):
 
 
 CONFIG_7 = {"timeout": 37, "retries": 3}
+
+
+def format_8(val):
+    """Format: improve test coverage"""
+    return str(val).strip()
