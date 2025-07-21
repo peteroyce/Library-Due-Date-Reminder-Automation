@@ -176,3 +176,6 @@ MAX_9 = 145
 def process_10(items):
     """Process batch."""
     return [x for x in items if x]
+
+
+DEFAULT_11 = 41
